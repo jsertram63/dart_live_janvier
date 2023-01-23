@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 
 import 'package:live1_dart_parlapratique/live1_dart_parlapratique.dart' as live1_dart_parlapratique;
@@ -37,7 +38,7 @@ void main(List<String> arguments) async {
 
 
     // ------------------------------------------------------------------------------------
-    //   LIVE 1 
+    //   LIVE 1  : les variables et les types - 
     //---------------------------------------------------------------------------------------
     // pour déclarer une variable , on aura le mot clé var
     // dart va déviner implicitement le type de la variable
@@ -65,7 +66,7 @@ void main(List<String> arguments) async {
     //  un comentaire sur plusieurs lignes /* */
 
     //------------------------------------------------------------------
-    // Live 2
+    // Live 2 : opérateurs & structure de controle (if else - switch - case)
     //------------------------------------------------------------------
 
     // opérateur arithmétique : + , - , / , %
@@ -155,8 +156,98 @@ void main(List<String> arguments) async {
      // var nom = stdin.readLineSync();
 
      //-----------------------------------------
-     // Live 3 
+     // Live 3 : Les boucles (while, for) , les chaines de charactères
     //--------------------------------------------
+
+
+    // while 
+    
+    // while { bloc }
+    /*
+    var i = 0;
+    while (i<= 5){
+      print("$i bonjour tout le monde ");
+      i++;
+    }
+    */
+
+    // do while 
+    /*
+    var j = 2;
+    do {
+      print("Bonjour");
+      j++;
+    }while(j<4);
+
+
+    var t=0;
+    var s = 0;
+
+    while(t<10){
+      t++;
+      print("$t");
+      while(s<10){
+        print("$s");
+        s++;
+      }
+
+    }*/
+
+    // continue qui va permettre à l'itération suivante
+    // break va permettre de sortir de la boucle
+
+    /*
+    var i = 0;
+    while(i<20){
+        i++;
+        if (i%2 == 0){
+        continue;  
+      }
+    
+      print("$i est un nombre impaire");
+      //i++;
+    }*/
+
+    // for : permet de faire une boucle
+    //for (var i= 0; i<5; i++){
+
+    //  print("Bonjour tout le monde");
+   // }
+
+    // collection.forEach 
+
+
+    // les chaines de caractères 
+    // String : 
+    String maChaine = 'ma premiere chaine';
+    String machaine2 = "ma deuxieme chaine";
+    String machaine3 = "C\'est l'hiver";
+    print(machaine3);
+    /// il faut 3 """" double quotes pour faire une chaine sur plusieurs lignes
+    String multiLigne = """ bonjour
+      les apprenants
+      bienvenue sur ce live
+       """;
+    print(multiLigne);
+    // concaténation 
+    String chaineConcatene = "$maChaine $machaine2";
+    print(chaineConcatene);
+
+    print(maChaine.toUpperCase());
+    String monNom = "JULIEN";
+    print(monNom.toLowerCase());
+    print(monNom.codeUnits);
+
+    print("La longueur de la chaine est de ${chaineConcatene.length}");
+    print("saisi ton nom au clavier");
+    var nomAuClavier = stdin.readLineSync();
+
+    if(nomAuClavier!.contains("S")){
+      print("ton nom contient un S");
+    }
+
+
+
 
 
 
