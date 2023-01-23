@@ -1,11 +1,14 @@
+import 'dart:async';
+
+
 import 'package:live1_dart_parlapratique/live1_dart_parlapratique.dart' as live1_dart_parlapratique;
 import 'package:test/expect.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${live1_dart_parlapratique.calculate()}!');
+void main(List<String> arguments) async {
+  //print('Hello world: ${live1_dart_parlapratique.calculate()}!');
 
   // les variables : entier (int), chaines de caractères (string), booleen (bool), nombre à virgules (double)
-
+  /*
   var nomDeLaVariable = 7;
   print("le contenu de la variabl est $nomDeLaVariable");
   print(nomDeLaVariable.runtimeType);
@@ -15,25 +18,21 @@ void main(List<String> arguments) {
 
   String maChaineDeCaracteres = "Bienvenue dans ce cours sur Dart";
   print(maChaineDeCaracteres);
-
-  
-
   var maMoyenne = 14.5;
   print(maMoyenne);
   print(maMoyenne.runtimeType);
-
   const maConstate = 6;
   double maMoyenne2 = 19.5;
   int maMoyenne3 = 10;
 
   var somme = maMoyenne3.toDouble() + maMoyenne2 + maMoyenne;
-  print(somme);
+  print(somme);*/
 
   // le mot clé late qui permet de déclarer une variable
-  late String maDescription;
+  //late String maDescription;
 
 
-    maDescription = "cours sur Dart";
+    //maDescription = "cours sur Dart";
     // ici le programme va allouer la zone mémoire pour stocker maDescription
 
 
@@ -65,28 +64,30 @@ void main(List<String> arguments) {
     // un simple commentaire //
     //  un comentaire sur plusieurs lignes /* */
 
+    //------------------------------------------------------------------
     // Live 2
+    //------------------------------------------------------------------
 
     // opérateur arithmétique : + , - , / , %
-    int compteur = 1;
+    //int compteur = 1;
     // addition
-    compteur = compteur +1; 
+    //compteur = compteur +1; 
     // multiplication
-    compteur = compteur * 2;
-    compteur *= 2;
+    //compteur = compteur * 2;
+    //compteur *= 2;
 
     // 1, 2, 4, 8
     // print equivaut à console.log en javascript
-    print("le compteur est de $compteur");
+    //print("le compteur est de $compteur");
 
-    int module = compteur % 3;
-    print("modulo est $module");
+    //int module = compteur % 3;
+    //print("modulo est $module");
 
     // opérateur unaire !, :, = 
     // = permet une affectation 
-    bool monEtat = false;
-    monEtat = !monEtat ; // <----- 
-    print("Mon etat $monEtat");
+    //bool monEtat = false;
+    //monEtat = !monEtat ; // <----- 
+    //print("Mon etat $monEtat");
 
     // opérateur de comparaison : 
     // == egalité
@@ -96,6 +97,7 @@ void main(List<String> arguments) {
 
     // structure de controle 
     // if/else => si sinon , if else if else 
+    /*
     int temperature = 6;
     if (temperature < 6){
       print("il commence à faire un peu frais");
@@ -103,24 +105,26 @@ void main(List<String> arguments) {
       print("c'est l'hiver");
     }else {
       print("la température est supportable");
-    }
+    }*/
 
     // le if est suivi d'un {bloc}
     // le else
 
+    /*
     String monNombre = "7"; 
     int le9 = 9;
 
     if (int.parse(monNombre) == 9){
       print("il y a égalité");
-    }
+    }*/
 
     // ternaire une combinaison ? : => l'équivalent d'un if/else
     // la condition ? expression 1 : expression 2 <=====
-    (int.parse(monNombre) == 9) ? print("il y a égalité de nouveau") : print("ce n'est pas égale");
+    //(int.parse(monNombre) == 9) ? print("il y a égalité de nouveau") : print("ce n'est pas égale");
 
   
     // le mot clé switch qui va permettre d'éviter une imbrication de if et de else
+    /*
     String permission = 'WRI';
 
     switch(permission){
@@ -134,11 +138,11 @@ void main(List<String> arguments) {
       default:
         print("vous avez aucun droits");
         break;
-    }
+    }*/
 
     // opérateurs logiques 
     // && : et logique  || ou logique , &| : xor (ou exclusif)
-
+    /*
     bool digicode = true;
     bool cle = false;
 
@@ -146,18 +150,22 @@ void main(List<String> arguments) {
       print("nous pourrons rentrer");
     } else {
       print("vous n'avez pas les deux moyens d'entrées");
-    }
+    }*/
+
+     // var nom = stdin.readLineSync();
+
+     //-----------------------------------------
+     // Live 3 
+    //--------------------------------------------
+
+
+
+
+
+  
+
+
 
 
 
 }
-  
-
-
-
-  
-
-
-
-
-
