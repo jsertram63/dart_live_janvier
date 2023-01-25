@@ -219,6 +219,7 @@ void main(List<String> arguments) async {
 
     // les chaines de caractères 
     // String : 
+    /*
     String maChaine = 'ma premiere chaine';
     String machaine2 = "ma deuxieme chaine";
     String machaine3 = "C\'est l'hiver";
@@ -244,8 +245,93 @@ void main(List<String> arguments) async {
 
     if(nomAuClavier!.contains("S")){
       print("ton nom contient un S");
-    }
+    }*/
+    //---------------------------------------
+    // live 4 : les collections 
 
+    
+    List<String> maListDetatsUE = [];
+    List<String> fruits = ["pommes","fraises","cerises","poires"];
+
+
+
+   var fraise = fruits[1];
+   print(fraise);
+
+   print(fruits.first);
+
+   fruits.add("ananas");
+   print(fruits);
+
+
+   var fruits3 = fruits.elementAt(3);
+    fruits.insert(0, "bananes");
+
+    print(fruits);
+
+    var nbDeFruits = fruits.length;
+    print("nombre de fruits est de ${fruits.length}");
+
+
+    var vals1 = List<int>.filled(8, 0);
+
+    print(vals1);
+
+
+
+  var vals2  = List<int>.generate(10, (index) => index * index);
+  print(vals2);
+
+  vals2.clear();
+  print(vals2);
+
+  if(vals2.isEmpty){
+    print("Le tableau est vide");
+  }
+
+  fruits.forEach((element) {
+    
+      print(element);
+  });
+  print(fruits);
+  print(fruits.reversed);
+
+  fruits.sort((a,b)=> a.compareTo(b));
+
+print(fruits);
+
+
+var firstSet = <String>{"nouilles","café","huiles"};
+var deuxiemeSet = <String>{"farine","café","huiles"};
+
+
+print("intersection de 2 sets ${firstSet.intersection(deuxiemeSet)}");
+print("union des deux set");
+
+// les MAPS : COllections ou structure de données avec un système de clé et valeur
+// clé : int, String....
+// valeur
+
+var words = {1:"ciel",2:"mer",3:"Soleil",4:"montagne"};
+print(words.runtimeType);
+
+print(words.isEmpty);
+words.putIfAbsent(5, () => "lune");
+print(words);
+
+words.remove(3);
+print(words);
+
+print(words);
+words.removeWhere((key, value) => value.startsWith("l"));
+print(words);
+
+Map <String, double> populationVille = new Map();
+populationVille.putIfAbsent("Paris", () => 200000);
+print(populationVille);
+
+
+var utilisateur = {"kevin":}
 
 
 
