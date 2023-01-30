@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ffi';
 import 'dart:io';
 
 
@@ -248,8 +249,9 @@ void main(List<String> arguments) async {
     }*/
     //---------------------------------------
     // live 4 : les collections 
-
+    //------------------------------------------
     
+    /*
     List<String> maListDetatsUE = [];
     List<String> fruits = ["pommes","fraises","cerises","poires"];
 
@@ -331,18 +333,92 @@ populationVille.putIfAbsent("Paris", () => 200000);
 print(populationVille);
 
 
-var utilisateur = {"kevin":}
+
+for(int i = 0; i< 5; i++){
+  print(" $i tour de boucle");
+}
+*/
+
+// LIVE 5 : Les fonctions 
 
 
+// les fonctions sans paramètres d'entrée et sans paramètres de sortie
+// mot clé (void) + nomDelafonction(){ bloc d'instruction}
+
+var msg = afficheBonjourPersonnalise("Dupont","Jean");
+print(msg);
+  print("avant l'appel de ma fonction");
+  double aire = calculAireRectangle(2.5, 1.95);
+  print("Aire du rectangle est de $aire");
+  print("apres l'appel de ma fonction");
+
+  List<double> mesNotes = [16, 18, 15, 16, 16];
+   String message = calculDeLaMoyennne("Julien", mesNotes);
+   print(message);
+     int resultat = multiplication(2,4);
+  print(resultat);
 
 
+}  //  <----- fin duu main 
+
+
+// les fonctions --------
+// fonction sans parametres d'entrée et sans valeur de retour
+void afficheMessage(){
+  print("Bonjour");
+  print("comment allez vous");
+}
+
+// fonction qui prend des paramètres d'entrée
+void afficheMessageAvecParametres(int nombreDeFois){
+ for (int i=0; i<nombreDeFois; i++){
+  print("bonjour");
+  print("tout le monde"); 
+  }
 
 
 
   
+}
 
 
 
 
 
+// fonction qui prend en entrée des paramètres et en sortie un paramètres
+String afficheBonjourPersonnalise(String nom, String prenom){
+  String msg = "Bonjour $nom $prenom";
+  return msg;
+}
+
+
+
+// fonction qui calcul une moyenne à partir d'une liste de note 
+// entrée : une liste de note (double)
+// sortie : la moyenne
+
+String calculDeLaMoyennne(String nom, List<double> mesNotes){
+  double laMoyenne =0;
+  double cumul = 0;
+  mesNotes.forEach((note) {
+    cumul = cumul + note;
+  });
+  laMoyenne = cumul/mesNotes.length;
+  String message = "$nom a une moyenne de $laMoyenne";
+
+
+  return message;
+}
+
+var multiplication = (int a, int b) =>  a * b;
+
+
+// Nom : CalculAireRectage
+// Description : calcul l'air d'un rectange
+// paramètres entrées : la largeur et la longeur
+// paramètre de sortie : aire du rectangle
+
+
+double calculAireRectangle(double longeur, double largeur){
+  return longeur * largeur;
 }
