@@ -1,10 +1,13 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first, unnecessary_this
+// ignore_for_file: prefer_initializing_formals
+
 import 'dart:async';
 import 'dart:ffi';
 import 'dart:io';
 
+import 'package:test/expect.dart';
 
 import 'package:live1_dart_parlapratique/live1_dart_parlapratique.dart' as live1_dart_parlapratique;
-import 'package:test/expect.dart';
 
 void main(List<String> arguments) async {
   //print('Hello world: ${live1_dart_parlapratique.calculate()}!');
@@ -344,7 +347,7 @@ for(int i = 0; i< 5; i++){
 
 // les fonctions sans paramètres d'entrée et sans paramètres de sortie
 // mot clé (void) + nomDelafonction(){ bloc d'instruction}
-
+/*
 var msg = afficheBonjourPersonnalise("Dupont","Jean");
 print(msg);
   print("avant l'appel de ma fonction");
@@ -357,9 +360,116 @@ print(msg);
    print(message);
      int resultat = multiplication(2,4);
   print(resultat);
+*/
+final utilisateur1 = Utilisateur(id: 1, name: "Berenger");
+final utilisateur2 = Utilisateur(name: "Kevin", id: 2);
+print(utilisateur1.name);
+print(utilisateur2.name);
+print(utilisateur1.toString());
+/*
+var realisateur = Realisateur();
+realisateur.nom = "Spielberg";
+realisateur.prenom = "Steven";
+realisateur.filmographie.add("ET");
+realisateur.filmographie.add("Jurrasic Park");
+print(realisateur.toString());
+realisateur.ajouterFilm("Les dents de la mer");
+print(realisateur.toString());*/
+
+var realisateur2 = Realisateur("Cameron", "James", ["Titanic"]);
+print(realisateur2.toString());
+
+var rectangle = Rectangle(10, 5);
+print("L'aire du rectangle est : ${rectangle.aire()}");
+print("le Premètre du rectange est : ${rectangle.perimetre()}");
+
+Realisateur realisteur = Realisateur("Besson", "Luc", ["Le 5eme element", "Taxi","Jeanne dac"]);
+print(realisteur.toString());
+List<Realisateur> realisateurs = [];
+realisateurs.add(realisteur);
+realisateurs.add(realisateur2);
+
+
+
 
 
 }  //  <----- fin duu main 
+
+
+class Utilisateur {
+  int? id;
+  String? name;
+
+  Utilisateur({required String name, required int id}){
+    this.name = name;
+    this.id = id;
+  }
+
+  getName(){
+    return name;
+  }
+
+  @override 
+  String toString(){
+    return '$id $name';
+  }
+}
+
+class Realisateur {
+  late String nom;
+  late String prenom;
+  List<String> filmographie = [];
+
+  Realisateur(this.nom, this.prenom, this.filmographie);
+
+
+
+  @override 
+  String toString(){
+    var realisateur = "$nom $prenom";
+    for (var film in filmographie){
+      realisateur += '- $film';
+    }
+    return realisateur;
+  }
+
+  void ajouterFilm(String nomFilm){
+    filmographie.add(nomFilm);
+  }
+
+}
+
+class Rectangle {
+  int? longeur;
+   int? largeur;
+
+   Rectangle(this.longeur, this.largeur);
+   int aire(){
+    int surface = 0;
+    if (this.largeur != null && this.longeur != null){
+      surface = this.largeur! * this.longeur!;
+    }
+    return surface;
+   }
+
+    int perimetre(){
+      return 2* (this.largeur! + this.longeur!);
+    }
+ }
+
+
+
+
+
+
+// POO : Programmation orienté objet
+// concept central dans le dev informatique
+// Objets : voiture , fentetre, telephone 
+// Ses objets ils ont des propriétes : volant, pneux ...
+// des méthodes comme rouler - reculter - telephonner
+// int, String , double, bool .... : deja des objets - 
+
+// pour faire de la programmation orienté objet ---> des classes 
 
 
 // les fonctions --------
